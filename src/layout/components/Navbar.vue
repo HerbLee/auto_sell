@@ -4,6 +4,7 @@
 
     <breadcrumb class="breadcrumb-container" />
 
+
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
@@ -28,6 +29,15 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
+   
+   
+    <div class="right-menu" style="padding-right: 20px;">
+      <el-input placeholder="search" v-model="input3" class="input-with-select">
+        <el-button slot="append" icon="el-icon-search"></el-button>
+      </el-input>
+    </div>
+
+
   </div>
 </template>
 
@@ -46,6 +56,14 @@ export default {
       'sidebar',
       'avatar'
     ])
+  },
+  data() {
+    return {
+      input1: '',
+      input2: '',
+      input3: '',
+      select: ''
+    }
   },
   methods: {
     toggleSideBar() {
@@ -83,6 +101,7 @@ export default {
   .breadcrumb-container {
     float: left;
   }
+
 
   .right-menu {
     float: right;
