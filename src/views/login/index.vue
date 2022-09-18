@@ -1,9 +1,11 @@
 <template>
-  <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
+  <div class="login-container" >
+    <el-form ref="loginForm" :model="loginForm" 
+    style="text-align:left;"
+    :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">Marketing System</h3>
       </div>
 
       <el-form-item prop="username">
@@ -43,10 +45,7 @@
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
 
-      <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: any</span>
-      </div>
+
 
     </el-form>
   </div>
@@ -141,6 +140,15 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
+
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.herblee.cn/tc/8.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+
   .el-input {
     display: inline-block;
     height: 47px;
@@ -165,7 +173,7 @@ $cursor: #fff;
 
   .el-form-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(100, 100, 100, 0.1);
     border-radius: 5px;
     color: #454545;
   }
@@ -185,10 +193,10 @@ $light_gray:#eee;
 
   .login-form {
     position: relative;
-    width: 520px;
+    width: 20%;
+    top: 35%;
+    left: 10%;
     max-width: 100%;
-    padding: 160px 35px 0;
-    margin: 0 auto;
     overflow: hidden;
   }
 

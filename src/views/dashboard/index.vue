@@ -1,30 +1,43 @@
 <template>
-  <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
-  </div>
-</template>
-
-<script>
-import { mapGetters } from 'vuex'
-
-export default {
-  name: 'Dashboard',
-  computed: {
-    ...mapGetters([
-      'name'
-    ])
+    <div class="app-container">
+    
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        form: {
+          name: '',
+          region: '',
+          date1: '',
+          date2: '',
+          delivery: false,
+          type: [],
+          resource: '',
+          desc: ''
+        }
+      }
+    },
+    methods: {
+      onSubmit() {
+        this.$message('submit!')
+      },
+      onCancel() {
+        this.$message({
+          message: 'cancel!',
+          type: 'warning'
+        })
+      }
+    }
   }
-}
-</script>
-
-<style lang="scss" scoped>
-.dashboard {
-  &-container {
-    margin: 30px;
+  </script>
+  
+  <style scoped>
+  .line{
+    text-align: center;
   }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
-  }
-}
-</style>
+  </style>
+  
+  
